@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                       _ButtonConfig(
                         alignment: const AlignmentDirectional(0.1, 0.27),
                         svgPath: 'assets/svg/search-alt-1-svgrepo-com.svg',
-                        route: '/rutaPorLibre',
+                        route: '/mapa_interactivo',
                       ),
                     ],
                   ),

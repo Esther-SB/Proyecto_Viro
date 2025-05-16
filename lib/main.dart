@@ -91,6 +91,8 @@ class MyApp extends StatelessWidget {
         '/RutasDone': (context) => const RutasDoneWidget(),
         '/RegalosDone': (context) => const RegalosdoneWidget(),
         '/Amigos': (context) => const AmigosWidget(),
+
+        
       },
     );
   }
