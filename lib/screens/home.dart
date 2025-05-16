@@ -8,8 +8,8 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
-  static String routeName = 'PaginaHome';
-  static String routePath = '/paginaHome';
+  static String routeName = 'Home';
+  static String routePath = '/home';
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> {
               );
             }
           } else {
-            Navigator.pushReplacementNamed(context, config.route);
+            Navigator.pushNamed(context, config.route);
           }
         },
         child: Container(

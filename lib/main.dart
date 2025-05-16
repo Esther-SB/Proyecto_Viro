@@ -63,12 +63,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF15448A)),
       ),
       routes: {
+        '/home': (context) => const HomePage(),        
         '/inicio': (context) => const InicioWidget(),
         '/cargando': (context) => const CargandoWidget(),
         '/pag_password': (context) => const PagPasswordWidget(),
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
-        '/home': (context) => const HomePage(),
+
 
         // Home > Accesos
         '/rutaPredefinidas': (context) => const RutapredefinidasWidget(),

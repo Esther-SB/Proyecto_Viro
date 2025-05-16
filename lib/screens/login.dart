@@ -55,7 +55,7 @@ Future<void> loginUser(
           UserSession.userId = authResponse.user!.id;
           userIdNotifier.value = authResponse.user!.id;
           
-          Navigator.pushReplacementNamed(context, '/home');
+          Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
         } else {
           print('Error: No se pudo obtener la sesión después del login');
           ScaffoldMessenger.of(context).showSnackBar(

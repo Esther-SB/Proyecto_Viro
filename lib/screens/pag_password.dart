@@ -120,24 +120,20 @@ class _PagPasswordWidgetState extends State<PagPasswordWidget> {
       );
 
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
+      final snackBarController = ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('¡Contraseña actualizada exitosamente! Serás redirigido al login.'),
           backgroundColor: Colors.green,
           duration: Duration(seconds: 3),
         ),
       );
-<<<<<<< Updated upstream
 
-      Navigator.pushNamed(context, '/login'); // ✅ NO pushReplacement
-=======
-      
-      // Esperar un momento para que el usuario pueda leer el mensaje
-      await Future.delayed(const Duration(seconds: 2));
-      
+      // Esperar a que el SnackBar se cierre antes de redirigir
+      await snackBarController.closed;
+
       if (!mounted) return;
       Navigator.pushReplacementNamed(context, '/login');
->>>>>>> Stashed changes
+
     } catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
